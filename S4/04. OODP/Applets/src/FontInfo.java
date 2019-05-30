@@ -10,12 +10,16 @@ public class FontInfo extends Applet {
         String fontFamily = f.getFamily();
         int fontSize = f.getSize();
         int fontStyle = f.getStyle();
-        String msg = "Family: " + fontName;msg += ", Font: " + fontFamily;msg += ", Size: " + fontSize + ", Style: ";
+        String msg = "Family: " + fontName;
+               msg += ", Font: " + fontFamily;
+               msg += ", Size: " + fontSize + ", Style: ";
         if((fontStyle & Font.BOLD) == Font.BOLD)
             msg += "Bold ";
         if((fontStyle & Font.ITALIC) == Font.ITALIC)
             msg += "Italic ";
         if((fontStyle & Font.PLAIN) == Font.PLAIN)
-            msg += "Plain ";g.drawString(msg, 4, 16);
+            msg += "Plain ";
+        g.drawString(msg, 4, 16);
+        Checkbox c = new Checkbox("C", true, null);
     }
 }
